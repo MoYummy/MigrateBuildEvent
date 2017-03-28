@@ -1,0 +1,14 @@
+version: 1.0.{build}
+skip_tags: true
+build_script:
+- cmd: >-
+    cd %APPVEYOR_BUILD_FOLDER%
+
+    build_sample.bat %APPVEYOR_BUILD_FOLDER%
+
+    type *.log
+test_script:
+- cmd: >-
+    cd %APPVEYOR_BUILD_FOLDER%
+
+    echo %APPVEYOR_BUILD_FOLDER%
